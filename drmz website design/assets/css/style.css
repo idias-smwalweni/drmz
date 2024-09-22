@@ -31,6 +31,7 @@ a{
 	text-decoration:none;
 	color: #2e4e8a;
 	font-size:16px;
+    font-weight: 500;
     margin: 20px;
 	padding:0;
 }
@@ -165,6 +166,16 @@ html,body{
     width:100%;
     height:100%;
 }
+.wcu h1 {
+    color: #2e4e8a;
+    text-transform: initial;
+    line-height: 1.8;
+}
+.wcu p {
+    font-size: 16px;
+    color: #2e4e8a;
+    padding: 35px 0 43px;
+}
 
 /*.header-text-area*/
 .header-text h2 {
@@ -206,25 +217,24 @@ html,body{
 /*-------------------------------------
         2.  About
 --------------------------------------*/
-.about {padding: 50px 0 100px;}
+.about {padding: 0 0 50px;}
 .about-content {padding-top: 100px;}
 /*.single-about-txt*/
-.single-about-txt h3 {
-    font-size:18px;
-    color: #3c4258;
+.single-about-txt h1 {
+    color: white;
     text-transform: initial;
-    line-height: 1.8;
+    line-height: 1;
 }
 .single-about-txt p {
     font-size: 16px;
-    color: #999fb3;
-    padding: 35px 0 43px;
+    color: white;
+    padding: 35px 0 30px;
 }
 .single-about-add-info {
     margin: 35px 0;
 }
 .single-about-add-info h3 {
-    color: #636a82;
+    color: #2e4e8a;
     font-size: 16px;
     text-transform: capitalize;
 }
@@ -285,7 +295,7 @@ html,body{
 /*.single-about-img */
 
 /*-------------------------------------
-        3. Portfolio
+        3. Our Services
 --------------------------------------*/
 .services {
     padding:  50px 0 100px;
@@ -296,12 +306,167 @@ html,body{
     padding-top: 100px;
 }
 
+.services-hero-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    background:url(../images/services1.png)no-repeat;
+    background-size:cover;
+    background-position: center;
+    height:400px;
+}
+
+
+.services-hero-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    background:url(../images/services2.jpeg)no-repeat;
+    background-size:cover;
+    background-position: center;
+    height:400px;
+}
+
+.services-hero-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    background:url(../images/about3.jpeg)no-repeat;
+    background-size:cover;
+    background-position: center;
+    height:400px;
+}
+
+.services-hero-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    background:url(../images/services4.jpeg)no-repeat;
+    background-size:cover;
+    background-position: center;
+    height:400px;
+}
+
+.services {
+    padding: 50px 0 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-fade {
+    position: relative; /* Create a containing block for the pseudo-element */
+}
+  
+.black-fade::before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position the pseudo-element absolutely */
+    top: 0; /* Top edge of the pseudo-element */
+    left: 0; /* Left edge of the pseudo-element */
+    width: 100%; /* Width of the pseudo-element */
+    height: 100%; /* Height of the pseudo-element */
+    background-color: #000; /* Black foreground color */
+    opacity: 0.45; /* Adjust the opacity to achieve the desired fade effect */
+}
+
+.content-container {
+    position: relative; /* Create a new stacking context */
+    z-index: 1; /* Ensure the content is on top of the black fade */
+  }
+
 /*-------------------------------------
-        4. Contacts
+        4. Testimonials
 --------------------------------------*/
 
+.scroll-x {
+    transition: scroll-left 0.5s ease-in-out;
+    overflow-x: auto;
+    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none; /* for IE and Edge */
+  }
+  
+  .scroll-x::-webkit-scrollbar {
+    display: none; /* for Chrome and Safari */
+  }
+
+  .testimonial-slider {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider-container {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .slider-nav {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .nav-btn {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #ffffff; 
+    box-shadow:0px 3px 10px rgba(0,0,0, 0.5); 
+    background-color: #2e4e8a;
+    border-radius: 5px;
+  }
+  
+  /* .nav-btn:hover {
+    background-color: #ccc;
+  } */
+  
+  .prev-btn {
+    margin-right: 10px;
+  }
+  
+  .next-btn {
+    margin-left: 10px;
+  }
+
+/*-------------------------------------
+        5. Contacts
+--------------------------------------*/
+
+.welcome-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    background:url(../images/contact_us_bg.jpeg)no-repeat;
+    background-size:cover;
+    background-position: center;
+    height:500px;
+}
+
 .contact {
+    padding: 50px 0 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact2 {
     padding: 50px 0 100px;
+    background-color: white;
+    border-radius: 15px;
     justify-content: center;
     align-items: center;
 }
